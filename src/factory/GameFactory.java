@@ -1,7 +1,24 @@
 package factory;
 
-public class GameFactory {
-    // Implemente a classe GameFactory que cria itens (arma, poção, armadura, objeto) e jogadores.
-    // Utilize o metodo createItem para criar os itens e createPlayer para criar os jogadores.
+import model.*;
 
+public class GameFactory {
+    public static Item createItem(String type, String name, int quantity, String rarity, String itemType) {
+        switch (type.toLowerCase()) {
+            case "weapon":
+                return new Weapon(name, quantity, rarity, itemType);
+            case "potion":
+                return new Potion(name, quantity, rarity, itemType);
+            case "armor":
+                return new Armor(name, quantity, rarity, itemType);
+            case "object":
+                return new ObjectItem(name, quantity, rarity, itemType);
+            default:
+                throw new IllegalArgumentException("Unknown item type: " + type);
+        }
+    }
+
+    public static Player createPlayer(String name) {
+        return new Player(name);
+    }
 }
