@@ -14,7 +14,7 @@ public class GameFactory {
             case "object":
                 return new ObjectItem(name, quantity, rarity, itemType);
             default:
-                throw new IllegalArgumentException("Unknown item type: " + type);
+                throw new IllegalArgumentException("Tipo de item desconhecido: " + type);
         }
     }
 
