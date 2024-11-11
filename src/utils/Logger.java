@@ -1,6 +1,16 @@
 package utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Logger {
-    // Implemente a classe Logger que registra as ações importantes do jogo, como trocas de itens.
-    // Crie os métodos log para registrar ações e printLogs para exibir todos os logs registrados.
+    private static final List<String> logs = new ArrayList<>();
+
+    public static void log(String message) {
+        logs.add(message);
+    }
+
+    public static void printLogs() {
+        logs.forEach(System.out::println);
+    }
 }
