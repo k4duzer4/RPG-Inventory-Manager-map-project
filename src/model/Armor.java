@@ -1,7 +1,46 @@
 package model;
 
-public class Armor {
-    // Implemente a classe Armor que representa uma armadura, estendendo a interface Item.
-    // Defina os métodos de uso, nome, quantidade, raridade e tipo de armadura.
 
+public class Armor implements Item {
+    private String name;
+    private int quantity;
+    private String rarity;
+    private String type;
+
+    public Armor(String name, int quantity, String rarity, String type) {
+        this.name = name;
+        this.quantity = quantity;
+        this.rarity = rarity;
+        this.type = type;
+    }
+
+    @Override
+    public void use() {
+        System.out.println("Using armor for defense.");
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Override
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String getRarity() {
+        return rarity;
+    }
+
+    @Override
+    public String getType() {
+        return type;
+    }
 }

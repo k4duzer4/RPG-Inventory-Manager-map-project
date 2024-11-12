@@ -1,7 +1,46 @@
 package model;
 
-public class Potion {
-    // Implemente a classe Potion que representa uma poção, estendendo a interface Item.
-    // Defina os métodos de uso, nome, quantidade, raridade e tipo de poção.
+public class Potion implements Item {
+    private String name;
+    private int quantity;
+    private String rarity;
+    private String type;
 
+    public Potion(String name, int quantity, String rarity, String type) {
+        this.name = name;
+        this.quantity = quantity;
+        this.rarity = rarity;
+        this.type = type;
+    }
+
+    @Override
+    public void use() {
+        System.out.println("Using potion for healing.");
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Override
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String getRarity() {
+        return rarity;
+    }
+
+    @Override
+    public String getType() {
+        return type;
+    }
 }
+
