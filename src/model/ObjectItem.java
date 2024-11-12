@@ -1,7 +1,47 @@
 package model;
 
 public class ObjectItem {
-    // Implemente a classe ObjectItem que representa um objeto, estendendo a interface Item.
-    // Defina os métodos de uso, nome, quantidade, raridade e tipo de objeto.
+     private String name;
+    private int quantity;
+    private String rarity;
+    private String type;
 
+    public ObjectItem(String name, int quantity, String rarity, String type) {
+        this.name = name;
+        this.quantity = quantity;
+        this.rarity = rarity;
+        this.type = type;
+    }
+
+    @Override
+    public void use() {
+        System.out.println("Using object item.");
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Override
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String getRarity() {
+        return rarity;
+    }
+
+    @Override
+    public String getType() {
+        return type;
+    }
 }
+
+
