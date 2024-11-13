@@ -15,7 +15,7 @@ public class Weapon implements Item {
     
         @Override
         public void use() {
-            System.out.println("Using weapon for attack.");
+            System.out.println("Usando arma.");
         }
     
         @Override

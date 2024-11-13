@@ -35,4 +35,12 @@ public class Inventory {
     public boolean hasItem(String itemName) {
         return items.containsKey(itemName);
     }
+
+    public Item getItem(String name) {
+        return items.get(name);
+    }
+
+    public Map<String, Item> getItems() {
+        return items;
+    }
 }

@@ -16,7 +16,7 @@ public class Armor implements Item {
 
     @Override
     public void use() {
-        System.out.println("Using armor for defense.");
+        System.out.println("Usando armadura para defesa.");
     }
 
     @Override

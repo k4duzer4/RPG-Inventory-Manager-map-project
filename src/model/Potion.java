@@ -15,7 +15,7 @@ public class Potion implements Item {
 
     @Override
     public void use() {
-        System.out.println("Using potion for healing.");
+        System.out.println("Usando porção.");
     }
 
     @Override

@@ -15,7 +15,7 @@ public class ObjectItem implements Item {
 
     @Override
     public void use() {
-        System.out.println("Using generic object item.");
+        System.out.println("Usando item.");
     }
 
     @Override

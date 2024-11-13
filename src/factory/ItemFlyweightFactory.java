@@ -14,9 +14,9 @@ public class ItemFlyweightFactory {
         if (item == null) {
             item = GameFactory.createItem(type, name, quantity, rarity, itemType);
             commonItems.put(key, item);
-            System.out.println("Created new item: " + name);
+            System.out.println("Novo item criado: " + name);
         } else {
-            System.out.println("Reusing item: " + name);
+            System.out.println("Item reutilizado: " + name);
         }
         return item;
     }
