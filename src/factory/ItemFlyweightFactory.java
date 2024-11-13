@@ -14,10 +14,14 @@ public class ItemFlyweightFactory {
         if (item == null) {
             item = GameFactory.createItem(type, name, quantity, rarity, itemType);
             commonItems.put(key, item);
-            System.out.println("Novo item criado: " + name);
+            System.out.println("Item criado: " + name);
         } else {
-            System.out.println("Item reutilizado: " + name);
+            System.out.println("Reutilizando item: " + name);
         }
         return item;
+    }
+
+    public static void clearItems() {
+        commonItems.clear();
     }
 }
