@@ -1,7 +1,7 @@
 package model;
 
-public class ObjectItem {
-     private String name;
+public class ObjectItem implements Item {
+    private String name;
     private int quantity;
     private String rarity;
     private String type;
@@ -15,7 +15,7 @@ public class ObjectItem {
 
     @Override
     public void use() {
-        System.out.println("Using object item.");
+        System.out.println("Using generic object item.");
     }
 
     @Override
@@ -43,5 +43,3 @@ public class ObjectItem {
         return type;
     }
 }
-
-

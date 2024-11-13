@@ -1,8 +1,5 @@
 package model;
 
-public class Inventory {
-   package model;
-
 import java.util.HashMap;
 import java.util.Map;
 
